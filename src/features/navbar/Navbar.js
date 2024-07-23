@@ -1,5 +1,5 @@
 import { Disclosure, DisclosureButton, DisclosurePanel, Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react'
-import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
+import { Bars3Icon, ShoppingCartIcon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 
 const user = {
   name: 'Tom Cook',
@@ -61,10 +61,11 @@ function NavBar({children}) {
                   <button
                     type="button"
                     className="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
-                  >
+                  >  
                     <span className="absolute -inset-1.5" />
                     <span className="sr-only">View notifications</span>
-                    <BellIcon aria-hidden="true" className="h-6 w-6" />
+                    <ShoppingCartIcon aria-hidden="true" className="h-6 w-6" />
+                    <span class="inline-flex items-center rounded-md bg-red-50 px-2 py-1 text-xs font-medium text-red-700 ring-1 ring-inset ring-red-600/10">Badge</span>
                   </button>
 
                   {/* Profile dropdown */}
@@ -138,8 +139,10 @@ function NavBar({children}) {
                 >
                   <span className="absolute -inset-1.5" />
                   <span className="sr-only">View notifications</span>
-                  <BellIcon aria-hidden="true" className="h-6 w-6" />
+                  <ShoppingCartIcon aria-hidden="true" className="h-6 w-6" />
+
                 </button>
+                  <span class="inline-flex items-center rounded-md bg-red-50 px-2 py-1 text-xs font-medium text-red-700 ring-1 ring-inset ring-red-600/10">Badge</span>
               </div>
               <div className="mt-3 space-y-1 px-2">
                 {userNavigation.map((item) => (

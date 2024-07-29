@@ -1,5 +1,5 @@
 import { Disclosure, DisclosureButton, DisclosurePanel, Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react'
-import { Bars3Icon, BellIcon, ShoppingCartIcon, XMarkIcon } from '@heroicons/react/24/outline'
+import { Bars3Icon, ShoppingCartIcon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 
 const user = {
   name: 'Tom Cook',
@@ -61,7 +61,7 @@ function NavBar({children}) {
                   <button
                     type="button"
                     className="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
-                  >
+                  >  
                     <span className="absolute -inset-1.5" />
                     <span className="sr-only">View notifications</span>
                     <ShoppingCartIcon aria-hidden="true" className="-z-10 h-6 w-6" />

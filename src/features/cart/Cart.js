@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 const products = [
   {
@@ -104,14 +105,16 @@ export function Cart() {
           <div className="mt-6 flex justify-center text-center text-sm text-gray-500">
             <p>
               or{" "}
-              <button
-                type="button"
-                onClick={() => setOpen(false)}
-                className="font-medium text-indigo-600 hover:text-indigo-500"
-              >
-                Continue Shopping
-                <span aria-hidden="true"> &rarr;</span>
-              </button>
+              <Link to='/checkout'>
+                <button
+                  type="button"
+                  onClick={() => setOpen(false)}
+                  className="font-medium text-indigo-600 hover:text-indigo-500"
+                >
+                  Continue Shopping
+                  <span aria-hidden="true"> &rarr;</span>
+                </button>
+              </Link>
             </p>
           </div>
         </div>
